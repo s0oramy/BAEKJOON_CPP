@@ -2,22 +2,22 @@
 using namespace std;
 
 int main() {
-	int a, b, c, temp;
-	cin >> a >> b;
-	cin >> c;
+	int h, m, t, temp;
+	cin >> h >> m;
+	cin >> t;
 	
-	a += c / 60;
-	b += c % 60;
+	h += t / 60;
+	m += t % 60;
 
-	if (b >= 60) {
-		a += 1;
-		b -= 60;
+	if (m >= 60) {
+		h += 1;
+		m -= 60;
 	}
-	if (a >= 24) {
-		a -= 24;
+	if (h >= 24) {
+		h -= 24;
 	}
 
-	cout << a << ' ' << b << endl;
+	cout << h << ' ' << m << endl;
 
 	return 0;
 }
